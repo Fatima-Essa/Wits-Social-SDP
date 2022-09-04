@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-//import Adapter from "enzyme-adapter-react-16";
+import Adapter from "enzyme-adapter-react-16";
 import { mount, shallow, configure } from "enzyme";
 
 import App from "./App";
 import Register from "./Register";
 import {render} from "@testing-library/react";
-//configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() });
 
 describe("basic input component", () => {
     it("should renders without crashing", () => {
