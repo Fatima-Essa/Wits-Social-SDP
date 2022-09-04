@@ -8,6 +8,6 @@ Social Media Platform created for Software Design Project
 (pending)
 
 ### Badges
-[![React CI](https://github.com/Fatima-Essa/Wits-Social-SDP/actions/workflows/production.yml/badge.svg)](https://github.com/Fatima-Essa/Wits-Social-SDP/actions/workflows/production.yml/badge.svg)[![codecov](https://codecov.io/gh/Fatima-Essa/Wits-Social-SDP/branch/main/graph/badge.svg?token=HKLXVV0YIF)](https://codecov.io/gh/Fatima-Essa/Wits-Social-SDP)
+[![React CI](https://github.com/Fatima-Essa/Wits-Social-SDP/actions/workflows/production.yml/badge.svg)](https://github.com/Fatima-Essa/Wits-Social-SDP/actions/workflows/production.yml/badge.svg) [![codecov](https://codecov.io/gh/Fatima-Essa/Wits-Social-SDP/branch/main/graph/badge.svg?token=HKLXVV0YIF)](https://codecov.io/gh/Fatima-Essa/Wits-Social-SDP)
 
 <em> See [Actions](https://github.com/Fatima-Essa/Heroku/actions) page for more build details. </em>
