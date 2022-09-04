@@ -21,13 +21,13 @@ jobs:
       
       - run: npm run build --if-present
       
-      - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: 'wits-social-project'
-          heroku_email: 'fatima.ressa@icloud.com'
-          branch: "main"
+#       - name: Deploy to Heroku
+#         uses: akhileshns/heroku-deploy@v3.12.12
+#         with:
+#           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+#           heroku_app_name: 'wits-social-project'
+#           heroku_email: 'fatima.ressa@icloud.com'
+#           branch: "main"
           
       - name: Run tests and collect coverage
         run: npm run test
