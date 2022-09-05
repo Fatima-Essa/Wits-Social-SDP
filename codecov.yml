@@ -3,3 +3,4 @@ ignore:
   - "src/VerifyEmail.js"
   - "src/Profile.js"
   - "src/ResetPassword.js"
+  - "src/index.js"
