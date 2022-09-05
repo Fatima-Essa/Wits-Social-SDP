@@ -4,3 +4,5 @@ ignore:
   - "src/Profile.js"
   - "src/ResetPassword.js"
   - "src/index.js"
+  - "src/reportWebVitals.js"
+ 
