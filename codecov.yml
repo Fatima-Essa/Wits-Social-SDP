@@ -5,6 +5,6 @@ ignore:
   - "src/ResetPassword.js"
   - "src/Login.js"
   - "src/index.js"
-  - "src/reportWebVitals.js"
+#   - "src/reportWebVitals.js"
 
  
