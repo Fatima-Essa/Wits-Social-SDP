@@ -4,7 +4,7 @@ ignore:
   - "src/Profile.js"
   - "src/ResetPassword.js"
   - "src/Login.js"
-#   - "src/index.js"
-#   - "src/reportWebVitals.js"
-z
+  - "src/index.js"
+  - "src/reportWebVitals.js"
+
  
