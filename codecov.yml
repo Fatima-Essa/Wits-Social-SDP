@@ -1,2 +1,3 @@
 ignore:
   - "src/Register.js"
+  - "src/VerifyEmail.js"
