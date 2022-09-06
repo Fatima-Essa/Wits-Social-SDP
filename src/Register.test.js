@@ -11,23 +11,29 @@ import {render} from "@testing-library/react";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("basic input component", () => {
+
+    //tests if the component can be rendered without crashing
     it("should renders without crashing", () => {
         const div = document.createElement("div");
       //  ReactDOM.render(<Register />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
 
+    //tests if we can render a placeholder
     it("should render a place", () => {
         const placeholder_text = "Enter your email";
         const wrapper = shallow(<input placeholder={placeholder_text} />);
         expect(wrapper.prop("placeholder")).toEqual(placeholder_text);
     });
 
+    //checks if the type of input is correct
     it("should render a correct type", () => {
         const type = "password";
         const wrapper = shallow(<input type={type} />);
         expect(wrapper.prop("type")).toEqual(type);
     });
+
+    //check if the button works
     it('should render a button with the class of primary', () => {
         render(<button />)
     })

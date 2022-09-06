@@ -1,10 +1,10 @@
 .auth{
   width: 90%;
   max-width: 400px;
-  border: 5px solid blue;
+  border: 5px solid blue; /*border color and settings*/
   padding: 20px;
   text-align: center;
-  color: goldenrod;
+  color: goldenrod; /*font color*/
 }
 
 .auth form{
@@ -12,12 +12,12 @@
   flex-direction: column;
   gap: 15px;
   margin: 0 auto 10px auto;
-  color: goldenrod;
+  color: goldenrod;  /*font color within form*/
 }
 
 .auth__success{
   padding: 10px 0;
-  background-color: hsl(147, 79%, 87%);
+  background-color: hsl(147, 79%, 87%); /*text box background color*/
   margin-bottom: 20px;
 }
 
@@ -37,5 +37,5 @@
   height: 40px;
   font-size: 16px;
   padding: 0 10px;
-  background-color: goldenrod;
+  background-color: goldenrod; /*button color*/
 }
