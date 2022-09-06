@@ -1,12 +1,12 @@
-import './profile.css'
-import {useAuthValue} from './AuthContext'
+import '../profile.css'
+import {useAuthValue} from '../AuthContext'
 import { signOut } from 'firebase/auth' 
-import { auth } from './firebase'
+import { auth } from '../firebase'
 import { getFirestore } from "firebase/firestore";
 import { collection, query , where, getDocs} from "firebase/firestore";
 import {useState} from 'react'
 
-import {app} from "./firebase";
+import {app} from "../firebase";
 
 
 
@@ -35,6 +35,7 @@ function Profile() {
 
 
   return (
+
     <div className='center'>
       <div className='profile'>
         <h1>Profile</h1>
