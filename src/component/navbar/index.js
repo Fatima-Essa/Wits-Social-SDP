@@ -4,11 +4,11 @@ import {
     NavLink,
     Bars,
     NavMenu,
-    NavBtn,
-    NavBtnLink,
+    //NavBtn,
+    //NavBtnLink,
 } from './NavbarElements';
-import {signOut} from "firebase/auth";
-import {auth} from "../../firebase";
+//import {signOut} from "firebase/auth";
+//import {auth} from "../../firebase";
 
 const Navbar = () => {
     return (
