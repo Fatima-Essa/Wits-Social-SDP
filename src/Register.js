@@ -2,12 +2,12 @@ import {useState} from 'react'
 
 import './forms.css'
 import {app, auth} from './firebase'
-import {useHistory, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
-import {useAuthValue} from './AuthContext'
+
 import {addDoc, collection, getFirestore} from "firebase/firestore";
 
-
+import {useHistory} from 'react-router-dom'
 function Register() {
 
   //instantiating variables
@@ -17,7 +17,7 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [error, setError] = useState('')
   const history = useHistory()
-  const {setTimeActive} = useAuthValue()
+
   const db = getFirestore(app);
 
   //add user details to firebase realtime databse
@@ -59,11 +59,15 @@ function Register() {
         createUserWithEmailAndPassword(auth, email, password)
             //verification screen is displayed
         .then((res) => {
-          setTimeActive(true)
-          history.push('/verify-email')
+          
+          
+        auth.signOut();
+        alert("You've registered!");
+        history.push('/Login')
+          
           })
         .catch(err => setError(err.message))
-
+          
       //add user to user table
       addToUsersTable(username, email)
 
