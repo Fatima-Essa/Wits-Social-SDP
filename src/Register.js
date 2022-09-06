@@ -10,6 +10,7 @@ import {addDoc, collection, getFirestore} from "firebase/firestore";
 
 function Register() {
 
+  //instantiating variables
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -19,7 +20,7 @@ function Register() {
   const {setTimeActive} = useAuthValue()
   const db = getFirestore(app);
 
-
+  //add user details to firebase realtime databse
   function addToUsersTable(username, email) {
 
     try {
@@ -34,10 +35,12 @@ function Register() {
 
   }
 
-
+  // validate password so 'password' and 'confirm password' match
   const validatePassword = () => {
     let isValid = true
+    //if both fields are not empty
     if (password !== '' && confirmPassword !== ''){
+      //if passwords do not match
       if (password !== confirmPassword) {
         isValid = false
         setError('Passwords does not match')
@@ -50,19 +53,18 @@ function Register() {
     e.preventDefault()
     setError('')
 
-
-    
+    //password is validated successfully
     if(validatePassword()) {
       // Create a new user with email and password using firebase
         createUserWithEmailAndPassword(auth, email, password)
-
-
+            //verification screen is displayed
         .then((res) => {
           setTimeActive(true)
           history.push('/verify-email')
           })
         .catch(err => setError(err.message))
 
+      //add user to user table
       addToUsersTable(username, email)
 
     }

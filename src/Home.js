@@ -7,9 +7,10 @@ import {auth} from './firebase'
 import {onAuthStateChanged} from 'firebase/auth'
 import PrivateRoute from './PrivateRoute'
 
+//import navigation bar for global use
 import Navbar from "./component/navbar";
 
-
+//empty activity for later functionality
 function Home() {
     const [currentUser, setCurrentUser] = useState(null)
     const [timeActive, setTimeActive] = useState(false)

@@ -6,6 +6,7 @@ import {sendEmailVerification} from 'firebase/auth'
 import {useState, useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
 
+//email verification method of unverified accounts
 function VerifyEmail() {
   const {currentUser} = useAuthValue()
   const [setButtonDisabled] = useState(false)
@@ -14,9 +15,11 @@ function VerifyEmail() {
   const {timeActive, setTimeActive} = useAuthValue()
   const history = useHistory()
   useEffect(() => {
+    //interval set for verification email screen timer
     const interval = setInterval(() => {
       currentUser?.reload()
       .then(() => {
+        //if user verifies email push to homepage
         if(currentUser?.emailVerified){
           clearInterval(interval)
           history.push('/')
@@ -42,6 +45,7 @@ function VerifyEmail() {
   }, [timeActive, time, setTimeActive])
 
 
+  //resend verification email to user
   const resendEmailVerification = () => {
     setButtonDisabled(true)
     sendEmailVerification(auth.currentUser)

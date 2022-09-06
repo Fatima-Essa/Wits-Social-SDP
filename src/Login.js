@@ -14,10 +14,12 @@ function Login(){
   const {setTimeActive} = useAuthValue()
   const history = useHistory()
 
+  //login user and authentication
   const login = e => {
     e.preventDefault()
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
+      //if user exists but is not verified yet, return email verification page and send email
       if(!auth.currentUser.emailVerified) {
         sendEmailVerification(auth.currentUser)
         .then(() => {
@@ -25,7 +27,7 @@ function Login(){
           history.push('/verify-email')
         })
       .catch(err => alert(err.message))
-    }else{
+    }else{ //user exits and is verified
       history.push('/Home')
     }
     })

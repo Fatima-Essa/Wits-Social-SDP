@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 
+//linking firebase to react app
 const firebaseConfig = {
 
     apiKey: "AIzaSyAiKHKbAxfxfOcHaZbFyiLca91h4jBlKb4",

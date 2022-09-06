@@ -9,8 +9,10 @@ function ResetPassword() {
   const [email, setEmail] = useState('')
   const auth = getAuth();
 
+  //send email for password reset to user
   const triggerResetEmail = async () => {
     await sendPasswordResetEmail(auth, email);
+    //return once email is sent
     console.log("Password reset email sent")
   }
  
