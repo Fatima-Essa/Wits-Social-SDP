@@ -39,3 +39,16 @@
   padding: 0 10px;
   background-color: goldenrod; /*button color*/
 }
+
+.bio-form{
+  width: 90%;
+  max-width: 400px;
+  border: 5px solid blue;
+  padding: 20px;
+  text-align: center;
+  color: goldenrod;
+}
+
+.bio-form::placeholder {
+  color: goldenrod;
+}

@@ -1,3 +1,22 @@
+/*.profile{*/
+/*  width: 90%;*/
+/*  max-width: 400px;*/
+/*  border: 5px solid blue;*/
+/*  padding: 20px;*/
+/*  text-align: center;*/
+/*  color: goldenrod;*/
+/*}*/
+
+/*.profile p {*/
+/*  text-align: left;*/
+/*}*/
+
+/*.profile > span{*/
+/*  color: blue;*/
+/*  cursor: pointer;*/
+/*  margin-top: 30px;*/
+/*}*/
+
 .profile{
   width: 90%;
   max-width: 400px;
@@ -16,3 +35,17 @@
   cursor: pointer;
   margin-top: 30px;
 }
+
+.profile-heading{
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  color: blue;
+}
+
+.update-bio-button{
+  color: blue;
+
+}
+
