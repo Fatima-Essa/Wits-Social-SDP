@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch} from 'react-router-dom'
 import Profile from './pages/Profile'
 
 import {AuthProvider} from './AuthContext'
