@@ -26,7 +26,7 @@ function Login(){
         })
       .catch(err => alert(err.message))
     }else{
-      history.push('/')
+      history.push('/Home')
     }
     })
     .catch(err => setError(err.message))
