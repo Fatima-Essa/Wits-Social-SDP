@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="w-full ">
           <div className="flex items-center flex-wrap justify-between w-full mb-3">
             <div className="">
-              <a
-                rel="nofollow"
-                target="_blank"
-                href="https://about.facebook.com/meta"
-              >
+              {/*<a*/}
+              {/*  rel="nofollow"*/}
+              {/*  target="_blank"*/}
+              {/*  href="https://about.facebook.com/meta"*/}
+              {/*>*/}
 
-              </a>
+              {/*</a>*/}
             </div>
             <div className="">
               <a
@@ -30,8 +30,8 @@ const Footer = () => {
                 rel="nofollow"
                 target="_blank"
                 href="./Footer"
-                rel="nofollow noopener noreferrer"
-                target="_blank"
+                // rel="nofollow noopener noreferrer"
+                // target="_blank"
               >
 
               </a>
@@ -50,20 +50,20 @@ const Footer = () => {
                 rel="nofollow"
                 target="_blank"
                 href="./Footer"
-                rel="nofollow noopener noreferrer"
-                target="_blank"
+                // rel="nofollow noopener noreferrer"
+                // target="_blank"
               >
 
               </a>
             </div>
             <div className="">
-              <a
-                rel="nofollow"
-                target="_blank"
-                href="https://developers.facebook.com/docs/instagram"
-              >
+              {/*<a*/}
+              {/*  rel="nofollow"*/}
+              {/*  target="_blank"*/}
+              {/*  href="https://developers.facebook.com/docs/instagram"*/}
+              {/*>*/}
 
-              </a>
+              {/*</a>*/}
             </div>
             <div className="">
               <a
