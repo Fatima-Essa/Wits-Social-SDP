@@ -215,13 +215,13 @@ const Register = () => {
 
             <div className="flex flex-col items-center justify-center rounded w-full mt-4">
               <p className="text-sm ">Get the app</p>
-              <a
-                target="_blank"
-                href="https://github.com/theviralboy/instagram-firebase"
-                className="text-sm"
-              >
+              {/*<a*/}
+              {/*  target="_blank"*/}
+              {/*  href="https://github.com/theviralboy/instagram-firebase"*/}
+              {/*  className="text-sm"*/}
+              {/*>*/}
 
-              </a>
+              {/*</a>*/}
             </div>
           </div>
         </div>

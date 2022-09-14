@@ -165,7 +165,7 @@ const HomePostCard = ({ post }) => {
       );
     };
     getComments();
-  }, [limitNum]);
+  }, [limitNum, post?.id, post?.likedBy,post?.savedBy, user?.uid]);
 
   return (
     <div

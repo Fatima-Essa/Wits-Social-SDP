@@ -59,14 +59,14 @@ const Home = () => {
       });
     };
     return suggestUsers();
-  }, []);
+  }, [user.uid]);
   useEffect(() => {
     const getData = async () => {
       const userData = await getDoc(doc(firestore, `/user/${user?.uid}`));
       setUserProfile(userData.data());
     };
     getData();
-  }, []);
+  }, [user?.uid]);
   return (
     <>
       <Header />
