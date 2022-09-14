@@ -2,7 +2,6 @@ import {
   collection,
   doc,
   getDoc,
-  getDocs,
   limit,
   onSnapshot,
   orderBy,
@@ -19,7 +18,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import Stories from "../components/Stories";
 import Footer from "../components/Footer";
-import { FakeUsers } from "../constants/fakeData";
+
 
 const Home = () => {
   const { user } = useContext(AuthContext);

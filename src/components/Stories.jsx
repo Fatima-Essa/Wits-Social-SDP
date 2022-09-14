@@ -1,5 +1,5 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import { FakeUsers } from "../constants/fakeData";
 
 const StoriyCard = ({ image, username }) => {

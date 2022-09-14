@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import Footer from "../components/Footer";
+
 
 // icons
-import { ImFacebook2 as FacebookIcon } from "react-icons/im";
+
 import { AiFillEye as EyeIcon } from "react-icons/ai";
 import { AiFillEyeInvisible as EyeInvisibleIcon } from "react-icons/ai";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";

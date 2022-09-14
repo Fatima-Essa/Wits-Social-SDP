@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext,useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // uuid
@@ -13,7 +13,7 @@ import { MdHomeFilled as HomeIcon } from "react-icons/md";
 import { RiMessengerLine as ChatIcon } from "react-icons/ri";
 import { CgAddR as AddPostIcon } from "react-icons/cg";
 import { ImCompass2 as ExploreIcon } from "react-icons/im";
-import { FiHeart as HeartIcon } from "react-icons/fi";
+
 import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
 import { CgProfile as ProfileIcon } from "react-icons/cg";
 import { VscClose as CloseIcon } from "react-icons/vsc";
@@ -39,11 +39,11 @@ import { signOut } from "firebase/auth";
 import { ReelFillIcon} from "../constants/icons";
 
 const Header = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
   const [modelOpen, setModelOpen] = useState(false);
   const [percentage, setPercentage] = useState(0);
   const [caption, setCaption] = useState("");
-  const [disabled, setDisabled] = useState(true);
+
   const [images, setImages] = useState(null);
   const [uploadComplete, setUploadComplete] = useState(false);
   const [uploading, setUploading] = useState(false);

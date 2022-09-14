@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { getAuth , sendPasswordResetEmail} from 'firebase/auth'
-import {AiFillEye as EyeIcon, AiFillEyeInvisible as EyeInvisibleIcon} from "react-icons/ai";
-import {ImFacebook2 as FacebookIcon, ImSpinner3 as SpinnerIcon} from "react-icons/im";
+
 
 
 function ResetPassword() {
