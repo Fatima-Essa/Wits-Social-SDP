@@ -18,8 +18,6 @@ import { Pagination } from "swiper";
 // icons
 import { CgHeart as HeartIcon } from "react-icons/cg";
 import { FaHeart as HeartFillIcon } from "react-icons/fa";
-import { RiChat3Line as CommentIcon } from "react-icons/ri";
-import { FiSend as SendIcon } from "react-icons/fi";
 import { BsBookmark as TagIcon } from "react-icons/bs";
 import { BsBookmarkFill as TagFillIcon } from "react-icons/bs";
 import { IoEllipsisHorizontalSharp as PostMenuIcon } from "react-icons/io5";

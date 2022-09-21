@@ -10,17 +10,12 @@ import "swiper/css/pagination";
 
 // icons
 import { MdHomeFilled as HomeIcon } from "react-icons/md";
-import { RiMessengerLine as ChatIcon } from "react-icons/ri";
 import { CgAddR as AddPostIcon } from "react-icons/cg";
 import { ImCompass2 as ExploreIcon } from "react-icons/im";
 
-import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
 import { CgProfile as ProfileIcon } from "react-icons/cg";
 import { VscClose as CloseIcon } from "react-icons/vsc";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
-import { BsBookmark as SavedIcon } from "react-icons/bs";
-import { FiSettings as SettingIcon } from "react-icons/fi";
-import { RiExchangeFundsLine as SwitchIcon } from "react-icons/ri";
 
 // firebase
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -36,7 +31,6 @@ import {
 } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 
-import { ReelFillIcon} from "../constants/icons";
 
 const Header = () => {
   const { user} = useContext(AuthContext);
