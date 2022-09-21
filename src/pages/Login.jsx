@@ -32,6 +32,8 @@ const Login = () => {
     }, 3000);
   };
 
+
+
   const submitForm = async (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) showError("Invalid email address");
@@ -57,9 +59,17 @@ const Login = () => {
     setDisabled(email.length > 0 && password.length > 0 ? false : true);
   }, [email, password]);
 
+
+
   return (
     <>
-      <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3">
+      <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3"
+           style={{
+        backgroundImage: "url(" + "https://ak.picdn.net/shutterstock/videos/1059015188/thumb/1.jpg" + ")",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="flex items-center">
           <div className="hidden md:block">
 
@@ -175,8 +185,6 @@ const Login = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center rounded w-full mt-4">
-
-
 
             </div>
           </div>
