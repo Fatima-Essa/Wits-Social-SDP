@@ -79,8 +79,14 @@ const Register = () => {
 
   return (
     <>
-      <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3">
-        <div className="flex items-center">
+      <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3"
+           style={{
+             backgroundImage: "url(" + "https://ak.picdn.net/shutterstock/videos/1059015188/thumb/1.jpg" + ")",
+             backgroundPosition: 'center',
+             backgroundSize: 'cover',
+             backgroundRepeat: 'no-repeat'
+           }}>
+        <div className="flex items-center" >
           <div className="flex flex-col flex-shrink-0 w-[350px]">
             <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 bg-white p-6">
               <div className="w-full">
@@ -198,7 +204,7 @@ const Register = () => {
                     </div>
                   )}
                   <div className="text-center w-full text-xs font-thin my-4">
-                    <a href="/Users/varac/WebstormProjects/Wits-Social-SDP/src/pages/Register">Forgot password?</a>
+                    {/*<a href="/Users/varac/WebstormProjects/Wits-Social-SDP/src/pages/Register">Forgot password?</a>*/}
                   </div>
                 </form>
               </div>
