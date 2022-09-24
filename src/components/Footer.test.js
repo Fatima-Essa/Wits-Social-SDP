@@ -8,6 +8,7 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { Link } from 'react-router-dom'
 import renderer from "react-dom/cjs/react-dom-test-utils.development";
 
+
 Enzyme.configure({ adapter: new Adapter() })
 
 it('renders correctly enzyme', () => {
