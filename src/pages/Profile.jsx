@@ -46,6 +46,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    //find the user in the database
     const getData = async () => {
       const userQuery = query(
         collection(firestore, "user"),
@@ -54,6 +55,7 @@ const Profile = () => {
       onSnapshot(userQuery, (users) => {
         // console.log(users);
         if (!users.empty) {
+          //set the profile image to the one in storage
           setPostIds(users?.docs[0]?.data()?.posts);
           setProfileUser({ id: users.docs[0].id, ...users?.docs[0]?.data() });
           setIsLoading(false);
@@ -94,6 +96,7 @@ const Profile = () => {
     }
   }, [postIds]);
 
+  //follow function
   const followProfile = async () => {
     console.log("follow", profileUser);
     if (!user) navigate("/login");
@@ -115,6 +118,7 @@ const Profile = () => {
     }
   };
 
+  //unfollow function
   const unFollowProfile = async () => {
     console.log("follow", profileUser);
     if (!user) navigate("/login");
