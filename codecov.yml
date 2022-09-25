@@ -1,2 +1,4 @@
 ignore:
     - "src/components/HomePostCard.jsx"
+    - "src/components/Header.jsx"
+    - "src/components/App.jsx"
