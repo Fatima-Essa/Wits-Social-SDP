@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // icons
 import { MdHomeFilled as HomeIcon } from "react-icons/md";
 import { CgAddR as AddPostIcon } from "react-icons/cg";
-import { ImCompass2 as ExploreIcon } from "react-icons/im";
+//import { ImCompass2 as ExploreIcon } from "react-icons/im";
 
 import { CgProfile as ProfileIcon } from "react-icons/cg";
 import { VscClose as CloseIcon } from "react-icons/vsc";
