@@ -40,6 +40,7 @@ import {
 import { firestore } from "../firebase/config";
 import { AuthContext } from "../context/AuthContext";
 
+//All the functionality needed in the home page
 const HomePostCard = ({ post }) => {
   const [commentInput, setCommentInput] = useState("");
   const [commentsArr, setCommentsArr] = useState([]);
