@@ -12,7 +12,7 @@ import {render} from "@testing-library/react";
 //configure({ adapter: new Adapter() });
 Enzyme.configure({ adapter: new Adapter() });
 
-jest.mock('Swiper', () => class Mocked{});
+//jest.mock('Swiper', () => class Mocked{});
 
 describe("basic input component", () => {
     it("should renders without crashing", () => {
