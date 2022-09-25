@@ -39,7 +39,7 @@ const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   const [postIds, setPostIds] = useState([]);
-  const { user } = useContext(AuthContext);
+  const  user  = useContext(AuthContext);
   const [profileUser, setProfileUser] = useState(null);
   const profilePic = useRef();
   const [noUser, setNoUser] = useState(true);
