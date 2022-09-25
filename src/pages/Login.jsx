@@ -11,6 +11,7 @@ import { isValidEmail } from "../utility";
 import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
+// Login page
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +26,7 @@ const Login = () => {
 
   if (user) navigate("/");
 
-  const showError = (error) => {
+  const showError = (error) => {      // if login error occurs
     setErrorMsg(error);
     setTimeout(() => {
       setErrorMsg("");
@@ -33,6 +34,7 @@ const Login = () => {
   };
 
 
+// on click of login
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -42,7 +44,7 @@ const Login = () => {
     if (isValidEmail(email) && password.length > 6) {
       setFormLoading(true);
       const user = await login(email, password);
-      if (user) {
+      if (user) {                                   // if blank text boxes
         setEmail("");
         setPassword("");
         setFormLoading(false);

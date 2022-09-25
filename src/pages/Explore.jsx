@@ -13,6 +13,8 @@ import ProfilePostCard from "../components/ProfilePostCard";
 import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
 import Loading from "../components/Loading";
 
+
+// Explore page main function - not active for this sprint
 const Explore = () => {
   const [posts, setposts] = useState([]);
   const [limitNum, setLimitNum] = useState(9);

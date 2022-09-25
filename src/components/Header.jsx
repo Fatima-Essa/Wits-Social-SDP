@@ -131,9 +131,9 @@ const Header = () => {
                     <button onClick={() => setModelOpen(true)}>
                       <AddPostIcon size={20}/>
                     </button>
-                    <NavLink to="/explore">
-                      <ExploreIcon size={20} />
-                    </NavLink>
+                    {/*<NavLink to="/explore">*/}
+                    {/*  <ExploreIcon size={20} />*/}
+                    {/*</NavLink>*/}
                     {/*<NavLink to="/reels">*/}
                     {/*  <ReelFillIcon size={22} />*/}
                     {/*</NavLink>*/}

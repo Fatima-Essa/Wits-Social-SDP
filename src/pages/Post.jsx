@@ -7,6 +7,8 @@ import Loading from "../components/Loading";
 import NotFound from "../components/NotFound";
 import { firestore } from "../firebase/config";
 
+
+// posting functionality
 const Post = () => {
   const params = useParams();
   const [post, setPost] = useState(null);
@@ -19,7 +21,7 @@ const Post = () => {
       const res = await getDoc(doc(firestore, `posts/${postId}`));
       // console.log();
       if (res.data()) {
-        setPost({ id: res.id, ...res.data() });
+        setPost({ id: res.id, ...res.data() });     // add post data to firestore
         setLoading(false);
       } else {
         setLoading(false);

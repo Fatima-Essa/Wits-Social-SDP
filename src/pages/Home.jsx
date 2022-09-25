@@ -19,7 +19,7 @@ import { AuthContext } from "../context/AuthContext";
 import Stories from "../components/Stories";
 import Footer from "../components/Footer";
 
-
+// Display posts and suggested users
 const Home = () => {
   const { user } = useContext(AuthContext);
   const [suggestUsers, setSuggestUsers] = useState();
@@ -27,7 +27,7 @@ const Home = () => {
   const [limitNum, setLimitNum] = useState(9);
   const [userProfile, setUserProfile] = useState(null);
   useEffect(() => {
-    const getData = async () => {
+    const getData = async () => {       // fetch data
       const q = query(
           collection(firestore, "posts"),
           orderBy("createdAt", "desc"),
@@ -43,14 +43,14 @@ const Home = () => {
       });
     };
     return getData();
-  }, [limitNum]);
+  }, [limitNum]);     // number of posts to display
   useEffect(() => {
-    const suggestUsers = async () => {
+    const suggestUsers = async () => {  // suggest users
       const q = query(
           collection(firestore, "user"),
           orderBy("lastLogin", "desc")
       );
-      onSnapshot(q, (snapshot) => {
+      onSnapshot(q, (snapshot) => {         // fetch suggested user data
         const users = snapshot.docs?.map((doc) => ({
           ...doc.data(),
           id: doc?.id,
@@ -61,7 +61,7 @@ const Home = () => {
     return suggestUsers();
   }, [user.uid]);
   useEffect(() => {
-    const getData = async () => {
+    const getData = async () => {     // get profile data
       const userData = await getDoc(doc(firestore, `/user/${user?.uid}`));
       setUserProfile(userData.data());
     };
