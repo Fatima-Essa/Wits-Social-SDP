@@ -2,6 +2,9 @@ import Header from "../components/Header";
 // import ReelsVideoCard from "../components/ReelsPlayerCard";
 // import { reelsData } from "../constants/reelsData";
 import { motion } from "framer-motion";
+
+// not active in current sprint
+
 const Reels = () => {
   return (
     <motion.div>
