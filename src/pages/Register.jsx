@@ -14,6 +14,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { firestore } from "../firebase/config";
 
+
+// register page
 const Register = () => {
   const [email, setEmail] = useState("");
   const [fullname, setFullname] = useState("");
@@ -37,17 +39,19 @@ const Register = () => {
     }, 3000);
   };
 
+
+  // on click of register button
   const submitForm = async (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) showError("Invalid email address");
     else if (password.length < 6)
-      showError("Password must be at least 6 characters");
+      showError("Password must be at least 6 characters");      // validate credentials
     if (isValidEmail(email) && password.length > 6) {
       setFormLoading(true);
 
       const userQuery = query(
         collection(firestore, "user"),
-        where("username", "==", username)
+        where("username", "==", username)         // check for duplicates
       );
 
       const users = await getDocs(userQuery);

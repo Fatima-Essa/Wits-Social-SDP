@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 import { getAuth , sendPasswordResetEmail} from 'firebase/auth'
 
 
+// forgot password feature
 
 function ResetPassword() {
 
     const [email, setEmail] = useState('')
     const auth = getAuth();
 
-    //send email for password reset to user
-    const triggerResetEmail = async () => {
+
+    const triggerResetEmail = async () => {             /// send reset email
         await sendPasswordResetEmail(auth, email);
-        //return once email is sent
         console.log("Password reset email sent")
     }
 
