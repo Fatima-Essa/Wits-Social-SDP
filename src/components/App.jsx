@@ -25,6 +25,7 @@ const RequireAuth = ({ children }) => {
   return user ? children : <Navigate to="/login" replace />;
 };
 
+//this component allows us to switch context from one page to another : Note all routes must be stated below !
 const App = () => {
   return (
     <>
