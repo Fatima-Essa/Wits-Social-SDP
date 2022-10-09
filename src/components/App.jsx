@@ -20,6 +20,7 @@ import Post from "../pages/Post";
 import Reels from "../pages/Reels";
 import ResetPassword from "../pages/ResetPassword";
 import SavedPosts from "../pages/SavedPosts";
+import Settings from "../pages/Settings";
 
 const RequireAuth = ({ children }) => {
   const { user } = useContext(AuthContext);
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/:username" element={<Profile />} />
             <Route path="/:username/saved" element={<SavedPosts />} />
           <Route path="/register" element={<Register />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/ResetPassword" element={<ResetPassword />} />
         </Routes>
       </Router>

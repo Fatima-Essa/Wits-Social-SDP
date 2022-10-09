@@ -13,6 +13,7 @@ import { MdHomeFilled as HomeIcon } from "react-icons/md";
 import { CgAddR as AddPostIcon } from "react-icons/cg";
 import { ImCompass2 as ExploreIcon } from "react-icons/im";
 import { BsBookmark as TagIcon } from "react-icons/bs";
+import { FiSettings as SettingIcon } from "react-icons/fi";
 
 import { CgProfile as ProfileIcon } from "react-icons/cg";
 import { VscClose as CloseIcon } from "react-icons/vsc";
@@ -31,7 +32,6 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { signOut } from "firebase/auth";
-
 
 const Header = () => {
   const {user} = useContext(AuthContext);
@@ -185,14 +185,15 @@ const Header = () => {
                                     {/*</div>*/}
 
                                   </li>
-                                  <li onClick={() => setMenuOpen(!menuOpen)}>
-                                    {/*<div className="flex items-center gap-1">*/}
-                                    {/*  <div>*/}
-                                    {/*    <SettingIcon />*/}
-                                    {/*  </div>*/}
-                                    {/*  <div>Setting</div>*/}
-                                    {/*</div>*/}
-                                  </li>
+                                    <Link
+                                        to={`/settings`}
+                                        className="flex items-center gap-1"
+                                    >
+                                        <div>
+                                            <SettingIcon />
+                                        </div>
+                                        <div>Settings </div>
+                                    </Link>
                                   <li onClick={() => setMenuOpen(!menuOpen)}>
                                     {/*<div className="flex items-center gap-1">*/}
                                     {/*  <div>*/}
