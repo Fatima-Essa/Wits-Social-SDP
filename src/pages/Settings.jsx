@@ -15,9 +15,9 @@ import Header from "../components/Header";
 const Settings = () => {
 
     // declare variables
-    const [username, setUsername] = useState("");
+    const [fullName, setFullName] = useState("");
     const [newBio, setNewBio] = useState('')
-    const [newUsername, setNewUsername] = useState('')
+    const [newFullName, setNewFullName] = useState('')
     const [bio, setBio] = useState("");
     const [userDocId, setUserDocId] = useState("");
     const db = firestore;
@@ -25,7 +25,7 @@ const Settings = () => {
 
 
     // fetches username from firestore to be displayed on profile page
-    async function getUsername() {
+    async function getFullName() {
 
         let dbUsername;
         let dbBio;
@@ -33,17 +33,17 @@ const Settings = () => {
 
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            dbUsername =  doc.data()["username"];
+            dbUsername =  doc.data()["fullName"];
             dbBio = doc.data()["biography"];
 
-            setUsername(dbUsername);
+            setFullName(dbUsername);
             setBio(dbBio);
 
             setUserDocId(doc.id)        // gets and stores doc id for later referencing
         })
     }
 
-    getUsername();      //get username once page loads
+    getFullName();      //get username once page loads
 
 
     // updates bio to current form contents on click of button
@@ -58,13 +58,13 @@ const Settings = () => {
 
     }
 
-    const updateUsername = e => {
+    const updateFullName = e => {
         e.preventDefault()
 
-        if (newUsername !== "")  // checks that a change has actually been made
+        if (newFullName !== "")  // checks that a change has actually been made
         {
             const docRef =  doc(db, "user", userDocId);
-            setDoc(docRef, {username: newUsername}, { merge: true });
+            setDoc(docRef, {fullName: newFullName}, { merge: true });
         }
 
     }
@@ -96,19 +96,19 @@ const Settings = () => {
                         >Update bio</button>
                     </form>
 
-                    <form onSubmit={updateUsername} name='Bio editor'>
+                    <form onSubmit={updateFullName} name='Bio editor'>
                   <textarea
                       rows="1"
                       cols="50"
                       className="bio-form"
-                      value={newUsername}
-                      placeholder= {username}
-                      onChange={e => setNewUsername(e.target.value)}
+                      value={newFullName}
+                      placeholder= {fullName}
+                      onChange={e => setNewFullName(e.target.value)}
                   />
                         <button
                             className= "update-bio-button"
                             type='submit'
-                        >Update username</button>
+                        >Update Fullname</button>
                     </form>
                 </div>
             </div>
