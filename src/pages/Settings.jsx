@@ -1,14 +1,11 @@
 import './settings.css'
-import {useAuthValue} from '../firebase/config'
-import { signOut} from 'firebase/auth'
-//import { auth } from './firebase'
-import {getFirestore, setDoc, doc} from "firebase/firestore";
+import {setDoc, doc} from "firebase/firestore";
  import { collection, query , where, getDocs} from "firebase/firestore";
-import {createContext, useContext, useState} from 'react'
+import {useContext, useState} from 'react'
 
 
 
-import { firestore, storage } from "../firebase/config";
+import { firestore} from "../firebase/config";
 import { AuthContext } from "../context/AuthContext";
 import Header from "../components/Header";
 
