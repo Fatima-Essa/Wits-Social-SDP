@@ -11,7 +11,8 @@ import "swiper/css/pagination";
 // icons
 import { MdHomeFilled as HomeIcon } from "react-icons/md";
 import { CgAddR as AddPostIcon } from "react-icons/cg";
-//import { ImCompass2 as ExploreIcon } from "react-icons/im";
+import { ImCompass2 as ExploreIcon } from "react-icons/im";
+import { BsBookmark as TagIcon } from "react-icons/bs";
 
 import { CgProfile as ProfileIcon } from "react-icons/cg";
 import { VscClose as CloseIcon } from "react-icons/vsc";
@@ -131,9 +132,9 @@ const Header = () => {
                     <button onClick={() => setModelOpen(true)}>
                       <AddPostIcon size={20}/>
                     </button>
-                    {/*<NavLink to="/explore">*/}
-                    {/*  <ExploreIcon size={20} />*/}
-                    {/*</NavLink>*/}
+                    <NavLink to="/explore">
+                      <ExploreIcon size={20} />
+                    </NavLink>
                     {/*<NavLink to="/reels">*/}
                     {/*  <ReelFillIcon size={22} />*/}
                     {/*</NavLink>*/}
@@ -165,12 +166,24 @@ const Header = () => {
                                     </Link>
                                   </li>
                                   <li onClick={() => setMenuOpen(!menuOpen)}>
+
+                                      <Link
+                                          to={`/${user?.username}/saved`}
+                                          className="flex items-center gap-1"
+                                      >
+                                          <div>
+                                              <TagIcon />
+                                          </div>
+                                          <div>Saved Posts</div>
+                                      </Link>
+
                                     {/*<div className="flex items-center gap-1">*/}
                                     {/*  <div>*/}
                                     {/*    <SavedIcon />*/}
                                     {/*  </div>*/}
                                     {/*  <div>Saved</div>*/}
                                     {/*</div>*/}
+
                                   </li>
                                   <li onClick={() => setMenuOpen(!menuOpen)}>
                                     {/*<div className="flex items-center gap-1">*/}
