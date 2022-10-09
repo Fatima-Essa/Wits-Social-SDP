@@ -14,7 +14,7 @@ import {
     query,
     where,
 } from "firebase/firestore";
-import { firestore, storage } from "../firebase/config";
+import { firestore } from "../firebase/config";
 
 // components
 import ProfilePostCard from "../components/ProfilePostCard";
