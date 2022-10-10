@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useNavigate, useParams } from "react-router-dom";
+import {NavLink, useNavigate, useParams} from "react-router-dom";
 
 // firebase
 import {
@@ -32,6 +32,7 @@ import { MdAddAPhoto as EditProfileIcon } from "react-icons/md";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import NotFound from "../components/NotFound";
 import Loading from "../components/Loading";
+import {ImCompass2 as ExploreIcon} from "react-icons/im";
 
 const Profile = () => {
   const params = useParams();
@@ -257,13 +258,29 @@ const Profile = () => {
                       <span className="font-semibold">
                         {profileUser?.followedBy?.length || 0}{" "}
                       </span>
-                      followers
+                      <button
+
+                          // className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Followers
+                      </button>
+                      <NavLink to="/Followers">
+                        <ExploreIcon size={20} />
+                      </NavLink>
                     </li>
                     <li>
                       <span className="font-semibold">
                         {profileUser?.following?.length || 0}{" "}
                       </span>
-                      following
+                      <button
+
+                          // className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Following
+                      </button>
+                      <NavLink to="/Following">
+                        <ExploreIcon size={20} />
+                      </NavLink>
                     </li>
                   </ul>
                   {/* user meta form medium screens */}
