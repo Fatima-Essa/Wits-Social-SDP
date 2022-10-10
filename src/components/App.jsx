@@ -21,6 +21,8 @@ import Reels from "../pages/Reels";
 import ResetPassword from "../pages/ResetPassword";
 import SavedPosts from "../pages/SavedPosts";
 import Settings from "../pages/Settings";
+import Following from "../pages/Following";
+import Followers from "../pages/Followers";
 
 const RequireAuth = ({ children }) => {
   const { user } = useContext(AuthContext);
@@ -64,6 +66,8 @@ const App = () => {
           <Route path="/register" element={<Register />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/ResetPassword" element={<ResetPassword />} />
+            <Route path="/Following" element={<Following />} />
+            <Route path="/Followers" element={<Followers />} />
         </Routes>
       </Router>
     </>
