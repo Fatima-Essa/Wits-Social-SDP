@@ -44,7 +44,7 @@ const Home = () => {
   let colour;
 
   console.log(bgColour);
-  if (bgColour.length != 0)
+  if (bgColour.length !== 0)
   {
     colour = bgColour[0]['value'];
   }
