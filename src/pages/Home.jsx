@@ -18,14 +18,43 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import Stories from "../components/Stories";
 import Footer from "../components/Footer";
+import Dropdown from "./Dropdown";
 
 // Display posts and suggested users
 const Home = () => {
+  const options = [
+    { value: "#b5fd8f", label: "Green" },
+    { value: "#71cdff", label: "Blue" },
+    { value: "#f67474", label: "Red" },
+    { value: "#fdf982", label: "Yellow" },
+    { value: "#ffd369", label: "Orange" },
+    { value: "pink", label: "Pink" },
+    { value: "#d088ff", label: "Purple" },
+    { value: "grey", label: "Grey" }
+  ];
+
+
+
   const { user } = useContext(AuthContext);
   const [suggestUsers, setSuggestUsers] = useState();
   const [posts, setposts] = useState([]);
   const [limitNum, setLimitNum] = useState(9);
   const [userProfile, setUserProfile] = useState(null);
+  const [bgColour, setbgColour] = useState(['white']);
+  let colour;
+
+  console.log(bgColour);
+  if (bgColour.length != 0)
+  {
+    colour = bgColour[0]['value'];
+  }
+  else
+  {
+    colour = 'white';
+  }
+
+
+
   useEffect(() => {
     const getData = async () => {       // fetch data
       const q = query(
@@ -71,6 +100,7 @@ const Home = () => {
       <>
         <Header />
         <div className="flex md:mt-14  max-w-4xl gap-2 mx-auto mb-8">
+          <style>{'body { background-color: ' + colour + '; }'}</style>
           <div className="w-full md:w-[70%]">
             <Stories />
             <div>
@@ -152,6 +182,16 @@ const Home = () => {
                     </Link>
                   </div>
               ))}
+            </div>
+            <div className="App">
+              <Dropdown
+                  isSearchable
+                  isMulti
+                  placeHolder="Select..."
+                  options={options}
+                  onChange={(value) => setbgColour(value) }
+              />
+
             </div>
           </div>
         </div>
