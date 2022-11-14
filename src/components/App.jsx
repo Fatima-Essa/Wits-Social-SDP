@@ -23,6 +23,8 @@ import SavedPosts from "../pages/SavedPosts";
 import Settings from "../pages/Settings";
 import Following from "../pages/Following";
 import Followers from "../pages/Followers";
+import TweetsHome from "../pages/TweetsHome";
+import ChatBotPage from "../ChatBot/ChatBotPage";
 
 const RequireAuth = ({ children }) => {
   const { user } = useContext(AuthContext);
@@ -58,6 +60,11 @@ const App = () => {
                 <Reels />
               </RequireAuth>
             }
+
+            // The <RequireAuth> component is a higher-order component that is used to wrap other components and ensure that the user is authenticated before they can access those components.
+              // The <Home>, <Explore>, and <Reels> components are the main components of the app that the user will interact with.
+              // The <Login>, <Post>, <Profile>, <SavedPosts>, <Register>, <Settings>, <ResetPassword>, <Following>, and <Followers> components are all components that are rendered when the user navigates to specific URLs.
+              // The <ChatBotPage> component is rendered when the user navigates to the home URL.
           />
           <Route path="/login" element={<Login />} />
           <Route path="/p/:id" element={<Post />} />
@@ -68,6 +75,8 @@ const App = () => {
             <Route path="/ResetPassword" element={<ResetPassword />} />
             <Route path="/Following" element={<Following />} />
             <Route path="/Followers" element={<Followers />} />
+            <Route path="/TweetsHome" element={<TweetsHome />} />
+            <Route path="/ChatBotPage" element={<ChatBotPage />} />
         </Routes>
       </Router>
     </>
