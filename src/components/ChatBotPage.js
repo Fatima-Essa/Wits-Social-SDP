@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-import BotMessage from "./components/BotMessage";
-import UserMessage from "./components/UserMessage";
-import Messages from "./components/Messages";
-import Input from "./components/Input";
+import BotMessage from "../ChatBot/components/BotMessage";
+import UserMessage from "../ChatBot/components/UserMessage";
+import Messages from "../ChatBot/components/Messages";
+import Input from "../ChatBot/components/Input";
 
-import API from "./ChatbotAPI";
+import API from "../ChatBot/ChatbotAPI";
 
-import "./styles.css";
-import Header from "./components/Header";
+import "../ChatBot/styles.css";
+import Header from "../ChatBot/components/Header";
+//import Header2 from "./Header"
+import {Link} from "react-router-dom";
 
 
 function ChatBotPage() {
@@ -49,14 +51,24 @@ function ChatBotPage() {
   };
 
   return (
+
       // This is a basic Chatbot structure. The Header, Messages, and Input components are rendered within the chatbot div. The chatbot div is then rendered within the box div.
       <div className= "box">
-    <div className="chatbot">
-      <Header />
-      <Messages messages={messages} />
-      <Input onSend={send} />
-    </div>
+        <div className="chatbot">
+          <Header />
+          <Messages messages={messages} />
+          <Input onSend={send} />
+        </div>
+
+        {/*<div className= "back">*/}
+        {/*  <Link to="/Login" className="text-blue-500 font-semibold">*/}
+        {/*    Exit session*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
       </div>
+
+
+
 
 
   );

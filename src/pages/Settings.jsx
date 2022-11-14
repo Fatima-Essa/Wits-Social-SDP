@@ -79,11 +79,10 @@ const Settings = () => {
             <div className = 'profile-heading'>
                 <h1 className= "settings">Settings</h1>
                 <div className='profile'>
-                    <p>My bio</p>
                     <form onSubmit={updateBio} name='Bio editor'>
 
                   <textarea
-                      rows="8"
+                      rows="4"
                       cols="50"
                       className="bio-form"
                       value={newBio}
@@ -91,7 +90,7 @@ const Settings = () => {
                       onChange={e => setNewBio(e.target.value)}
                   />
                         <button
-                            className= "update-bio-button"
+                            className= "w-full bg-blue-400 text-xs text-black font-bold p-1 rounded-sm object-center"
                             type='submit'
                         >Update bio</button>
                     </form>
@@ -106,7 +105,7 @@ const Settings = () => {
                       onChange={e => setNewFullName(e.target.value)}
                   />
                         <button
-                            className= "update-bio-button"
+                            className= "w-full bg-blue-400 text-xs text-black font-bold p-1 rounded-sm"
                             type='submit'
                         >Update Fullname</button>
                     </form>
