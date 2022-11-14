@@ -11,7 +11,6 @@ import API from "../ChatBot/ChatbotAPI";
 import "../ChatBot/styles.css";
 import Header from "../ChatBot/components/Header";
 //import Header2 from "./Header"
-import {Link} from "react-router-dom";
 
 
 function ChatBotPage() {
@@ -60,11 +59,6 @@ function ChatBotPage() {
           <Input onSend={send} />
         </div>
 
-        {/*<div className= "back">*/}
-        {/*  <Link to="/Login" className="text-blue-500 font-semibold">*/}
-        {/*    Exit session*/}
-        {/*  </Link>*/}
-        {/*</div>*/}
       </div>
 
 
