@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 // icons
-import { ImFacebook2 as FacebookIcon } from "react-icons/im";
+
 import { AiFillEye as EyeIcon } from "react-icons/ai";
 import { AiFillEyeInvisible as EyeInvisibleIcon } from "react-icons/ai";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
@@ -150,18 +150,7 @@ const Login = () => {
                       </div>
                       <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
                     </div>
-                    <div className="my-4 ">
-                      <button
-                        className="text-[#4267B2] flex items-center justify-center w-full"
-                        type="button"
-                        disabled
-                      >
-                        <FacebookIcon fill="#4267B2" />
-                        <span className="text-xs font-semibold ml-1">
-                          Log in with Facebook
-                        </span>
-                      </button>
-                    </div>
+
                   </div>
                   {errorMsg?.length > 0 && (
                     <div className="text-center text-xs my-4 text-red-600">
