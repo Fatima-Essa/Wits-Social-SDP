@@ -45,7 +45,7 @@ const HomePostCard = ({ post }) => {
     const [commentsArr, setCommentsArr] = useState([]);
     const [limitNum, setLimitNum] = useState(2);
     const [liked, setLiked] = useState(false);
-    const [saved, setSaved] = useState(false);
+    //const [saved, setSaved] = useState(false);
     const { user } = useContext(AuthContext);
     const swiper = useSwiper();
 

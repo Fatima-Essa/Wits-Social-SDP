@@ -38,7 +38,6 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { signOut } from "firebase/auth";
-import {ReelFillIcon} from "../constants/icons";
 
 const Header = () => {
   const {user} = useContext(AuthContext);
