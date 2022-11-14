@@ -124,7 +124,7 @@ const HomePostCard = ({ post }) => {
                     }));
                     // console.log(comments);
                     setLiked(post?.likedBy?.includes(user?.uid));
-                    setSaved(post?.savedBy?.includes(user?.uid));
+                    //setSaved(post?.savedBy?.includes(user?.uid));
                     setCommentsArr(comments);
                 },
                 (err) => {
