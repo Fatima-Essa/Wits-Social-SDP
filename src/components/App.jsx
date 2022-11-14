@@ -24,7 +24,7 @@ import Settings from "../pages/Settings";
 import Following from "../pages/Following";
 import Followers from "../pages/Followers";
 import TweetsHome from "../pages/TweetsHome";
-import ChatBotPage from "../ChatBot/ChatBotPage";
+import ChatBotPage from "./ChatBotPage";
 
 const RequireAuth = ({ children }) => {
   const { user } = useContext(AuthContext);
